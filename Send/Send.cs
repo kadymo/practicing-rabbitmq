@@ -1,8 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-// See https://aka.ms/new-console-template for more information
-
-using System.Text;
+﻿using System.Text;
 using RabbitMQ.Client;
 
 var factory = new ConnectionFactory() { HostName = "localhost" };
