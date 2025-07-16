@@ -11,6 +11,8 @@ await channel.ExchangeDeclareAsync(exchange: "logs", type: "fanout");
 QueueDeclareOk queueDeclareResult = await channel.QueueDeclareAsync();
 string queueName = queueDeclareResult.QueueName;
 await channel.QueueBindAsync(queue: queueName, "logs", string.Empty);
+// A binding is a relationship between an exchange and a queue
+// The queue is interested in messages from this exchange
 
 Console.WriteLine(" [*] Waiting for logs.");
 
